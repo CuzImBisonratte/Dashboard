@@ -183,6 +183,15 @@ html {
     }
 }
 
+#author {
+    position: fixed;
+    color: #3d454e;
+    right: 60px;
+    bottom: 10px;
+    height: 10px;
+    width: 50px;
+}
+
 
 /*  */
 
@@ -271,6 +280,22 @@ html {
     }
 }
 
+#LocationButtonOff {
+    position: absolute;
+    bottom: 20px;
+    height: 100px;
+    left: 20px;
+    width: 100px;
+}
+
+#LocationButtonOn {
+    position: absolute;
+    bottom: 20px;
+    height: 100px;
+    left: 20px;
+    width: 100px;
+}
+
 .draggable {
     position: absolute;
     z-index: 9;
@@ -353,7 +378,7 @@ html {
 
 #BLdiv {
     top: 622px;
-    height: 120px;
+    height: 100px;
     left: 20px;
     width: 130px;
 }
@@ -388,7 +413,7 @@ html {
 
 #Javadiv {
     top: 622px;
-    height: 120px;
+    height: 100px;
     left: 160px;
     width: 130px;
 }
@@ -407,18 +432,9 @@ html {
     width: 720px;
 }
 
-#LocationButtonOff {
-    position: absolute;
-    bottom: 20px;
+#cocktaildiv {
+    top: 622px;
     height: 100px;
-    left: 20px;
-    width: 100px;
-}
-
-#LocationButtonOn {
-    position: absolute;
-    bottom: 20px;
-    height: 100px;
-    left: 20px;
-    width: 100px;
+    left: 300px;
+    width: 160px;
 }

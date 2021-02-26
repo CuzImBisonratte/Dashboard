@@ -261,7 +261,7 @@ function Navifunctions() {
             return;
         } else if (locationOn == false) {
             locationOn = true;
-            document.getElementById("LocationButton").innerHTML = '<img id="LocationButtonOff" src="OnButton.png" />';
+            document.getElementById("LocationButton").innerHTML = '<img id="LocationButtonOff" src="OnButton.png" onclick="location.reload()"/>';
             document.querySelector("#LocationButtonOff").addEventListener("click", getLocation);
         } else {
             console.log("ERROR")
@@ -310,8 +310,14 @@ Navifunctions();
 async function randomAdvice() {
     const advice = await fetch("https://api.adviceslip.com/advice")
     const advicejson = await advice.json();
-    console.log(advicejson);
     document.getElementById("advice").innerHTML = advicejson.slip.advice;
-    console.log(advicejson.slip.advice);
 }
 randomAdvice();
+
+
+async function randomCocktail() {
+    const cocktail = await fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+    const cocktailjson = await cocktail.json();
+    document.getElementById("cocktail").innerHTML = cocktailjson.drinks[0].strDrink;
+}
+randomCocktail();
