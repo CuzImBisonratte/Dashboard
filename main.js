@@ -321,3 +321,11 @@ async function randomCocktail() {
     document.getElementById("cocktail").innerHTML = cocktailjson.drinks[0].strDrink;
 }
 randomCocktail();
+
+
+async function randomWitz() {
+    const witz = await fetch("https://v2.jokeapi.dev/joke/Any?lang=de&blacklistFlags=nsfw&type=single")
+    const witzjson = await witz.json();
+    document.getElementById("witz").innerHTML = witzjson.joke;
+}
+randomWitz();
