@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-de" class="" lang="de-de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Forum by CuzImBisonratte" />
+    <meta name="keywords" content="CuzImBisonratte, Forum" />
+    <meta name="author" content="CuzImBisonratte" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+
+<body>
+    <nav>
+        <!-- <div class="topnav">
+            <a href="../index.html">Home</a>
+            <a href="../Auslastung.php">Auslastung</a>
+            <a class="active" href="General.html">General</a>
+        </div> -->
+    </nav>
+    <main>
+        <div id="uhr" class="draggable">
+            <div class="header">Uhrzeit</div>
+            <p>
+                <div id="uhrzeit"></div>
+            </p>
+        </div>
+        <div class="draggable" id="corolist">
+            <div class="header">Corona</div>
+            <p>
+                <div id="coronalist1"></div>
+                <div id="coronalist2"></div>
+                <div id="coronalist3"></div>
+                <div id="coronalist4"></div>
+                <div id="coronalist5"></div>
+                <div id="coronalist6"></div>
+                <div id="coronalist7"></div>
+                <div id="coronalist8"></div>
+                <div id="coronalist9"></div>
+                <div id="coronalist10"></div>
+                <div id="coronalist11"></div>
+                <div id="coronalist12"></div>
+                <div id="coronalist13"></div>
+                <div id="coronalist14"></div>
+                <div id="coronalist15"></div>
+                <div id="coronalist16"></div>
+            </p>
+        </div>
+        <div class="draggable" id="discordstatus">
+            <div class="header">Discord</div>
+            <p id="Discord"></p>
+        </div>
+        <div class="draggable" id="geolocation">
+            <div class="header">Geolocation</div>
+            <p id="Geolocationbody"></p>
+        </div>
+        <div class="draggable" id="geolocationmapdrag">
+            <div class="header">Geolocation</div>
+            <div id="geolocationmap"></div>
+            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="">
+            </script>
+        </div>
+        <div class="draggable" id="Datum1">
+            <div class="header">Tag</div>
+            <p id="Datum2"></p>
+        </div>
+        <div class="draggable" id="Bitcoindiv">
+            <div class="header">Bitcoin</div>
+            <p id="Bitcoin"></p>
+        </div>
+        <div class="draggable" id="Catdiv">
+            <div class="header">Zufällige Katze</div>
+            <img src="https://loremflickr.com/270/232/cat" />
+        </div>
+        <div class="draggable" id="UAdiv">
+            <div class="header">UserAgent</div>
+            <p id="UA"></p>
+        </div>
+        <div class="draggable" id="BLdiv">
+            <div class="header">Ländercode</div>
+            <p id="BL"></p>
+        </div>
+        <div class="draggable" id="Onlinediv">
+            <div class="header">Ist dieses Gerät Online?</div>
+            <p id="Online"></p>
+        </div>
+        <div class="draggable" id="Platformdiv">
+            <div class="header">Plattform:</div>
+            <p id="Platform"></p>
+        </div>
+        <div class="draggable" id="Cookiediv">
+            <div class="header">Cookies</div>
+            <p id="Cookie"></p>
+        </div>
+        <div class="draggable" id="Javadiv">
+            <div class="header">Java</div>
+            <p id="Java"></p>
+        </div>
+        <div class="draggable" id="weatherlist">
+            <div class="header">Wetter</div>
+            <p>
+                <div id="weatherlist1"></div>
+                <div id="weatherlist2"></div>
+                <div id="weatherlist3"></div>
+                <div id="weatherlist4"></div>
+                <div id="weatherlist5"></div>
+                <div id="weatherlist6"></div>
+                <div id="weatherlist7"></div>
+                <div id="weatherlist8"></div>
+                <div id="weatherlist9"></div>
+                <div id="weatherlist10"></div>
+                <div id="weatherlist11"></div>
+                <div id="weatherlist12"></div>
+                <div id="weatherlist13"></div>
+                <div id="weatherlist14"></div>
+                <div id="weatherlist15"></div>
+                <div id="weatherlist16"></div>
+            </p>
+        </div>
+        <div class="draggable" id="advicediv">
+            <div class="header">Spruch des Tages</div>
+            <p id="advice"></p>
+        </div>
+        <div class="draggable" id="cocktaildiv">
+            <div class="header">Cocktailname</div>
+            <p id="cocktail"></p>
+        </div>
+        <div class="draggable" id="witzdiv">
+            <div class="header">Witz</div>
+            <p id="witz"></p>
+        </div>
+        <div class="draggable" id="billdiv">
+            <div class="header">Bill</div>
+            <img id="bill" src="https://belikebill.ga/billgen-API.php?default=1" />
+        </div>
+    </main>
+    <div id="LocationButton">
+        <img id="LocationButtonOff" src="OffButton.png" />
+    </div>
+    <p id="author">Bisonrattee</p>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script>
+        var mymap = L.map('geolocationmap').setView([0, 0], 1);
+        var accessToken = "pk.eyJ1IjoiYmlzb25yYXR0ZWUiLCJhIjoiY2tsZmQ3eWd4MHp1bDJvbjE5Yjc1aGF5MyJ9.qXv3YLKGChhjMJ-CRngBxA"
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1IjoiYmlzb25yYXR0ZWUiLCJhIjoiY2tsZmQ3eWd4MHp1bDJvbjE5Yjc1aGF5MyJ9.qXv3YLKGChhjMJ-CRngBxA'
+        }).addTo(mymap);
+    </script>
+</body>
+
+</html>
