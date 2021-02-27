@@ -445,3 +445,15 @@ html {
     left: 470px;
     width: 980px;
 }
+
+#billdiv {
+    top: 70px;
+    height: 168px;
+    left: 1460px;
+    width: 320px;
+}
+
+#bill {
+    height: 168px;
+    width: 320px;
+}
